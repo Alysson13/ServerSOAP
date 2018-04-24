@@ -1,9 +1,20 @@
 package br.com.joni.ws;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
+
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "Pessoa", propOrder = {
+    "nome",
+    "idade",
+    "cpf"
+})
 public class Pessoa {
-	private String nome;
-	private int idade;
-	private String cpf;
+	
+	protected String nome;
+	protected int idade;
+	protected String cpf;
 
 	public Pessoa(String nome, int idade, String cpf) {
 		this.nome = nome;
